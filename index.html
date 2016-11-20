@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+  <meta content="贾克奇的博客" name="description">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+  <meta name="applicable-device" content="pc,mobile"/>
+  <title>JK (贾克奇)</title>
+  <style type="text/css">
+  /* ---- reset ---- */
+    body {
+      margin: 0;
+      font:normal 75% Arial, Helvetica, sans-serif;
+      background-color: rgba(245,245,245, 0.8);
+    }
+   .content {
+      position: relative;
+      color: black;
+      z-index: 10;
+      text-align: center;
+      top: 200px;
+    }
+    .title {
+      font: 30px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+
+    a {
+      font-size: 20px;
+      text-decoration: none;
+      color: #4C4C4C;
+      padding: 5px 10px;
+      border: 1px solid black;
+      margin-right: 10px;
+      border-radius: 2px;
+    }
+    p {
+      position: relative;
+      color: gray;
+      font-size: 18px;
+      top: 100px;
+    }
+    @media only screen and (min-width: 480px) and (max-width: 767px) {
+      a {
+        font-size: 40px;
+        text-decoration: none;
+        color: #4C4C4C;
+        padding: 5px 10px;
+        border: 1px solid black;
+        margin-right: 10px;
+        border-radius: 2px;
+      }
+      p {
+        position: relative;
+        color: #4C4C4C;
+        font-size: 35px;
+        top: 100px;
+      }
+      #backButton { 
+            display: inline-block;
+            width:50px; height:30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="particles-js"></div>
+  <div class="top"></div>
+  <div class="content">
+    <a href="https://github.com/jiakeqi" target='_blank' class="hvr-buzz">Github</a>
+    <a href="http://www.jianshu.com/users/104bb553628b/latest_articles" target='_blank' class="hvr-wobble-horizontal">Blog</a>
+    <a href="https://weibo.com/jiakeqi" target='_blank' class="hvr-buzz">Weibo</a>
+    <em><p>less is more</p></em>
+    <button id="backButton">返回</button>
+    <script type="text/javascript">
+
+        var btn = document.getElementById('backButton');
+
+        btn.addEventListener('click', function() {
+           callBackObj.iosback();
+        });
+    </script>
+  </div>
+  <link href="https://cdn.bootcss.com/hover.css/2.0.2/css/hover-min.css" rel="stylesheet">
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?bd489e03a01b47be242d36fb170bdd6d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+</body>
+</html>
