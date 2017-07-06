@@ -17,7 +17,6 @@
     body {
       margin: 0;
       font:normal 75% Arial, Helvetica, sans-serif;
-      background: linear-gradient(to right, rgb(254, 172, 94), rgb(199, 121, 208), rgb(75, 192, 200));
       color:black;
     }
    .content {
@@ -25,31 +24,34 @@
       z-index: 10;
       text-align: center;
       position  : absolute;
-      top       : 50%;
+      top       : 40%;
       left      : 50%;
-      transform : translate(-50%,-50%);
+      transform : translate(-50%,-40%);
     }
     .title {
       font-family: "PingFang SC Light";
       font-size: 18px;
-      color: #dddddd;
+      color: #B8B8B8;
+    }
+    img {
+      width: 150px;
     }
 
     a {
       font-size: 20px;
       text-decoration: none;
-      color:#fffffd;
+      color:#B8B8B8;
       padding: 5px 10px;
-      border: 1px solid #fff;
-      margin-right: 10px;
-      border-radius: 20px;
+      border: 1px solid #B8B8B8;
+      margin-right: 15px;
+      border-radius: 6px;
       font-family: "PingFangSC-Light";
     }
 
     a:hover {
-      background-color: rgba(45,190,199,0.2);
+/*      background-color: rgba(45,190,199,0.2);
       border: none;
-      box-shadow: 1px 1px 6px rgba(45,190,199,0.2);
+      box-shadow: 1px 1px 6px rgba(45,190,199,0.2);*/
     }
 
     @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -73,11 +75,15 @@
 <body>
   <div id="particles-js"></div>
   <div class="top"></div>
+  <!-- <img src="http://ohrnszn5w.bkt.clouddn.com/gaoqi.png" class="logo"> -->
   <div class="content">
+    <p class="title">
+      <img src="http://ohrnszn5w.bkt.clouddn.com/gaoqi.png">
+    </p>
     <a href="http://i.ui.cn/ucenter/950034.html" target='_blank' class="hvr-buzz">&nbsp UI.CN &nbsp</a>
     <a href="http://thelastpirate.lofter.com" target='_blank' class="hvr-wobble-horizontal">&nbsp BLOG &nbsp </a>
     <a href="http://qiqimonkey.zcool.com.cn/" target='_blank' class="hvr-buzz">&nbsp ZCOOL &nbsp </a>
-    <p class="title">Nec Spe Nec Metu</p>
+    <!-- <p class="title">Nec Spe Nec Metu</p> -->
     </script>
   </div>
   <link href="https://cdn.bootcss.com/hover.css/2.0.2/css/hover-min.css" rel="stylesheet">
