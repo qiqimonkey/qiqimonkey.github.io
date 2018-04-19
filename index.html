@@ -50,23 +50,16 @@
     }
 
     a {
-      font-size: 13px;
+      font-size: 16px;
       text-decoration: none;
-      color:#a0a0a0;
+      color:#000;
       padding: 5px 0px;
       width: 140px;
       height: 24px;
       line-height: 24px;
-      border: 2px solid #a0a0a0;
       margin: 0px 10px;
       border-radius: 2px;
       font-family: "av";
-    }
-
-    a:hover {
-      background-color: #bfbfbf;
-      border-color: #bfbfbf;
-      color: #000;
     }
 
     @media only screen and (min-width: 200px) and (max-width: 767px) {
@@ -109,6 +102,7 @@
     <a href="http://thelastpirate.lofter.com" target='_blank' class="hvr-wobble-horizontal">&nbsp BLOG &nbsp </a>
     <a href="http://qiqimonkey.zcool.com.cn/" target='_blank' class="hvr-buzz">&nbsp ZCOOL &nbsp </a>
   </div>
+  <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
   <link href="https://cdn.bootcss.com/hover.css/2.0.2/css/hover-min.css" rel="stylesheet">
   <script>
     var _hmt = _hmt || [];
@@ -118,6 +112,42 @@
       var s = document.getElementsByTagName("script")[0];
       s.parentNode.insertBefore(hm, s);
     })();
+
+    split = function (element) {
+  words = $(element).text().split('');
+  for (i in words) {
+    words[i] = '<span>' + words[i] + '</span>';
+  }
+  text = words.join('');
+  $(element).html(text);
+};
+
+textify = function(element,method,delay) {
+  split(element);
+  $(element + ' span').css('opacity','0')
+  $(element + ' span').css('position','relative');
+  in_speed = 10;
+  count = 0;
+  setTimeout(function(){
+    count = 0;
+    $(element + ' span').each(function () {
+      if(method == 'fade'){
+        $(this).delay(0 + in_speed * count).animate({ opacity: '1' }, 200);
+      } else if(method == 'bounce'){
+        $(this).delay(0 + in_speed * count).animate({ opacity: '1','top':'-4px'}, 220,'easeOutCubic');
+        $(this).delay(0 + in_speed * count/4).animate({ opacity: '1','top':'0px'}, 220);
+      }
+      count++;
+    });
+  },delay);
+};
+
+/* Now textify! */
+
+  textify('.title','fade',500);
+  textify('.links a:nth-child(1)','fade',1500);
+  textify('.links a:nth-child(2)','fade',1500);
+  textify('.links a:nth-child(3)','fade',1500);
   </script>
 </body>
 </html>
